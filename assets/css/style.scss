@@ -1,0 +1,95 @@
+$primary-color: rgb(61,90,35);
+$secondary-color: rgb(216,235,199);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f9fafa;
+}
+
+
+
+
+header {
+    .frete {
+        background-color: $secondary-color;
+        padding: 8px 0;
+        text-align: center;
+        span {
+            font-size: 12px;
+        }
+    }
+        .header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding: 25px 60px;
+            border-bottom: solid 1px #000;
+            border-top: solid 1px #000;
+            .navigation {
+                .logo {
+                    h1 {
+                        color: $primary-color;
+                        font-weight: bolder;
+                    }
+                }
+                display: flex;
+                align-items: center;
+                width: 70%;
+                gap: 20px;
+                ul {
+                    li {
+                        display: inline;
+                        margin: 0 25px;
+                        a {
+                            text-decoration: none;
+                            color: rgb(30,43,17);
+                        }
+                    }
+                }
+            }
+        }
+} 
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    .ContainerDescription {
+        width: 40%;
+        h2 {
+            font-size: 62px;
+            color: $primary-color;
+        }
+        .subtitle {
+            margin: 42px 0;
+            font-size: 26px;
+        }
+        .btn {
+            width: 160px;
+            height: 48px;
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: ease 0.4s;
+            border: solid 1px $primary-color;
+            cursor: pointer;
+            &:hover {
+                color: $primary-color;
+                border: solid 1px $primary-color;
+                background: none;
+            }
+        }
+    }
+}
+
