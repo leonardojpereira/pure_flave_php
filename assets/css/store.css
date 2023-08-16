@@ -11,7 +11,7 @@ body {
 }
 
 header .frete {
-  background-color: #d8ebc7;
+  background-color: rgb(216, 235, 199);
   padding: 8px 0;
   text-align: center;
 }
@@ -25,8 +25,8 @@ header .header {
   align-items: center;
   width: 100%;
   padding: 25px 60px;
-  border-bottom: solid 1px #000;
-  border-top: solid 1px #000;
+  border-bottom: solid 1px rgb(61, 90, 35);
+  border-top: solid 1px rgb(61, 90, 35);
 }
 header .header .navigation {
   display: flex;
@@ -34,13 +34,20 @@ header .header .navigation {
   width: 70%;
   gap: 20px;
 }
-header .header .navigation .logo h1 {
-  color: #3d5a23;
-  font-weight: bolder;
-}
-header .header .navigation .logo h1 a {
+header .header .navigation .logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  color: #3d5a23;
+  color: rgb(61, 90, 35);
+}
+header .header .navigation .logo a img {
+  width: 40px;
+  height: 40px;
+}
+header .header .navigation .logo a h1 {
+  color: rgb(61, 90, 35);
+  font-weight: bolder;
 }
 header .header .navigation ul li {
   display: inline;
@@ -48,11 +55,11 @@ header .header .navigation ul li {
 }
 header .header .navigation ul li a {
   text-decoration: none;
-  color: #1e2b11;
+  color: rgb(30, 43, 17);
 }
 header .header .ContainerLogin a {
   text-decoration: none;
-  color: #3d5a23;
+  color: rgb(61, 90, 35);
 }
 
 main {
@@ -60,11 +67,11 @@ main {
   margin: 42px auto;
 }
 main h2 {
-  color: #3d5a23;
+  color: rgb(61, 90, 35);
   font-size: 32px;
 }
 main p {
-  color: #1e2b11;
+  color: rgb(30, 43, 17);
   margin: 22px 0;
 }
 main .containerProducts {
@@ -78,7 +85,7 @@ main .containerProducts .mimic {
   margin: 0 12px 42px 0;
 }
 main .containerProducts .mimic span {
-  color: #3d5a23;
+  color: rgb(61, 90, 35);
 }
 
 footer {
@@ -87,15 +94,15 @@ footer {
 footer .ContainerContactInfo {
   display: flex;
   justify-content: space-around;
-  border-top: solid 1px #3d5a23;
-  border-bottom: solid 1px #3d5a23;
+  border-top: solid 1px rgb(61, 90, 35);
+  border-bottom: solid 1px rgb(61, 90, 35);
   padding: 28px 0;
   gap: 18px;
 }
 footer .ContainerContactInfo ul li {
   list-style: none;
   margin: 14px 0;
-  color: #1e2b11;
+  color: rgb(30, 43, 17);
   font-size: 12px;
 }
 footer .ContainerCopyrightInfo {
@@ -104,11 +111,11 @@ footer .ContainerCopyrightInfo {
   align-items: center;
   gap: 22px;
   padding: 28px 0 38px 0;
-  background-color: #e2e2f2;
+  background-color: rgb(226, 226, 242);
 }
 footer .ContainerCopyrightInfo .footerText {
   font-size: 12px;
-  color: #3d5a23;
+  color: rgb(61, 90, 35);
 }
 footer .ContainerCopyrightInfo .payment {
   display: flex;

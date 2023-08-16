@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f9fafa;
+  background-color: #f4f4f4;
 }
 
 main {
@@ -21,7 +21,7 @@ main {
 }
 
 header .frete {
-  background-color: #d8ebc7;
+  background-color: rgb(216, 235, 199);
   padding: 8px 0;
   text-align: center;
 }
@@ -36,7 +36,8 @@ header .header {
   width: 100%;
   padding: 25px 60px;
   border: solid 1px #000;
-  border-top: none;
+  border-bottom: solid 1px rgb(61, 90, 35);
+  border-top: solid 1px rgb(61, 90, 35);
 }
 header .header .navigation {
   display: flex;
@@ -44,13 +45,20 @@ header .header .navigation {
   width: 70%;
   gap: 20px;
 }
-header .header .navigation .logo h1 {
-  color: #3d5a23;
-  font-weight: bolder;
-}
-header .header .navigation .logo h1 a {
+header .header .navigation .logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  color: #3d5a23;
+  color: rgb(61, 90, 35);
+}
+header .header .navigation .logo a img {
+  width: 40px;
+  height: 40px;
+}
+header .header .navigation .logo a h1 {
+  color: rgb(61, 90, 35);
+  font-weight: bolder;
 }
 header .header .navigation ul li {
   display: inline;
@@ -58,11 +66,11 @@ header .header .navigation ul li {
 }
 header .header .navigation ul li a {
   text-decoration: none;
-  color: #1e2b11;
+  color: rgb(30, 43, 17);
 }
 header .header .ContainerLogin a {
   text-decoration: none;
-  color: #3d5a23;
+  color: rgb(61, 90, 35);
 }
 
 .form-container {
@@ -71,6 +79,13 @@ header .header .ContainerLogin a {
   border-radius: 5px;
   padding: 20px;
   width: 400px;
+}
+.form-container h2 {
+  margin-bottom: 22px;
+}
+.form-container #login-form footer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .form-group {
@@ -82,24 +97,30 @@ header .header .ContainerLogin a {
   font-weight: bold;
 }
 .form-group input[type=text],
+.form-group input[type=email],
 .form-group input[type=password] {
   width: 100%;
+  height: 38px;
+  outline: none;
+  padding-left: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
   font-size: 16px;
 }
 
 button {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: rgb(61, 90, 35);
+  color: #fff;
   border: none;
+  width: 100%;
   border-radius: 3px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  transition: opacity ease 0.3s;
 }
 button:hover {
-  background-color: #0056b3;
+  opacity: 0.9;
 }
 
 .toggle-form {
