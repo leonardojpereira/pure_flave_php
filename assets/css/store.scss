@@ -15,7 +15,6 @@ body {
     background-color: #f9fafa;
 }
 
-
 header {
     .frete {
         background-color: $secondary-color;
@@ -77,50 +76,36 @@ header {
 }
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
+    max-width: 900px;
+    margin: 42px auto;
+    h2 {
+        color: $primary-color;
+        font-size: 32px;
+    }
+    p {
+        color: $text-color;
+        margin: 22px 0;
+    }
 
-    .ContainerDescription {
-        width: 40%;
-
-        h2 {
-            font-size: 52px;
-            color: $primary-color;
-        }
-
-        .subtitle {
-            margin: 32px 0;
-            font-size: 22px;
-            color: $text-color;
-        }
-
-        .btn {
-            width: 160px;
-            height: 48px;
-            background-color: $primary-color;
-            color: #fff;
-            border: none;
-            border-radius: 30px;
-            font-size: 16px;
-            transition: ease 0.4s;
-            border: solid 1px $primary-color;
-            cursor: pointer;
-
-            &:hover {
+    .containerProducts {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        .mimic {
+            display: flex;
+            gap: 12px;
+            flex-direction: column;
+            margin: 0 12px 42px 0;
+            span {
                 color: $primary-color;
-                border: solid 1px $primary-color;
-                background: none;
             }
         }
     }
 }
 
+
 footer {
     width: 100%;
+
     .ContainerContactInfo {
         display: flex;
         justify-content: space-around;
@@ -128,6 +113,7 @@ footer {
         border-bottom: solid 1px $primary-color;
         padding: 28px 0;
         gap: 18px;
+
         ul {
             li {
                 list-style: none;
@@ -144,14 +130,17 @@ footer {
         align-items: center;
         gap: 22px;
         padding: 28px 0 38px 0;
-        background-color: rgb(226,226,242);
+        background-color: rgb(226, 226, 242);
+
         .footerText {
             font-size: 12px;
             color: $primary-color;
         }
+
         .payment {
             display: flex;
             flex-direction: column;
+
             .footerText {
                 margin-left: 12px;
             }

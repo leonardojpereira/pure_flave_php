@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap');
+
+$primary-color: rgb(61, 90, 35);
+$secondary-color: rgb(216, 235, 199);
+$text-color: rgb(30, 43, 17);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Syne', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f9fafa;
+}
+
+main {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+header {
+  .frete {
+    background-color: $secondary-color;
+    padding: 8px 0;
+    text-align: center;
+
+    span {
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 25px 60px;
+    border: solid 1px #000;
+    border-top: none;
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      width: 70%;
+      gap: 20px;
+
+      .logo {
+        h1 {
+          color: $primary-color;
+          font-weight: bolder;
+
+          a {
+            text-decoration: none;
+            color: $primary-color;
+          }
+        }
+      }
+
+      ul {
+        li {
+          display: inline;
+          margin: 0 25px;
+
+          a {
+            text-decoration: none;
+            color: $text-color;
+          }
+        }
+      }
+    }
+
+    .ContainerLogin {
+      a {
+        text-decoration: none;
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.form-container {
+  background-color: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+}
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.toggle-form {
+  text-align: center;
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+}
