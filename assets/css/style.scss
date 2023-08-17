@@ -76,9 +76,48 @@ header {
         }
 
         .ContainerLogin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 42px;
+
+            .userContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                .userIcon {
+                    font-size: 32px;
+                }
+            }
+
             a {
                 text-decoration: none;
                 color: $primary-color;
+            }
+
+            .cart-container {
+                display: flex;
+                cursor: pointer;
+                position: relative;
+                .counter {
+                    width: 20px;
+                    height: 20px;
+                    background-color: yellow;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    color: #000;
+                    font-weight: bold;
+                }
+
+                .cart {
+                    font-size: 28px;
+                } 
             }
         }
     }
@@ -87,7 +126,7 @@ header {
 main {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     gap: 80px;
@@ -167,3 +206,83 @@ footer {
         }
     }
 }
+
+.cart-modal {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Começa fora da tela */
+    width: 400px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+  }
+  
+  .modal-content {
+    padding: 20px;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Exibe o modal */
+  .cart-modal.active {
+    right: 0;
+  }
+
+  .cart-items {
+    margin-top: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  .item-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item-name {
+    font-weight: bold;
+  }
+  
+  .item-price {
+    color: #777;
+  }
+  
+  /* Estilos do total e botão de finalizar compra */
+  .cart-total {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  .checkout-btn {
+    display: block;
+    margin-top: 20px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .checkout-btn:hover {
+    background-color: darken($primary-color, 10%);
+  }

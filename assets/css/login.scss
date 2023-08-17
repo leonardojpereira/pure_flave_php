@@ -19,7 +19,7 @@ main {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   margin: 0;
-  display: flex;
+  display: flex !important;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
@@ -86,10 +86,21 @@ header {
     }
 
     .ContainerLogin {
-      a {
-        text-decoration: none;
-        color: $primary-color;
-      }
+      .userContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        .userIcon {
+            font-size: 32px;
+        }
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary-color;
+  }
+
     }
   }
 }
