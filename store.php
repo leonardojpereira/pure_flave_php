@@ -1,3 +1,44 @@
+<?php
+
+  $products = [
+    [
+      'name' => 'Suco verde',
+      'price' => '6.00',
+      'image' => 'assets/img/suco_verde.webp'
+    ],
+    
+    [
+      'name' => 'Suco de maça',
+      'price' => '6.00',
+      'image' => 'assets/img/suco_de_maca.webp'
+    ],
+
+    [
+      'name' => 'Suco de laranja',
+      'price' => '6.00',
+      'image' => 'assets/img/suco_laranja.webp'
+    ],
+
+    [
+      'name' => 'Toranja rosa',
+      'price' => '6.00',
+      'image' => 'assets/img/taranja_rosa.webp'
+    ],
+    
+    [
+      'name' => 'Gengibre e tangerina',
+      'price' => '6.00',
+      'image' => 'assets/img/gengibre_e_tangerina.webp'
+    ],
+
+    [
+      'name' => 'Lima e frambuesa',
+      'price' => '6.00',
+      'image' => 'assets/img/frambuesa.webp'
+    ]
+  ]
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +46,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja</title>
     <link rel="stylesheet" href="assets/css/store.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header>
@@ -35,41 +77,16 @@
         <h2>Comprar sabores</h2>
         <p>Refrigerado, 100% orgânico, embalado com vitaminas, <br> nutrientes e produtos naturais</p>
         <div class="containerProducts">
+            <?php foreach ($products as $product):?>
             <div class="mimic">
-                <img src="./assets/img/suco_verde.webp" alt="Suco verde">
-                <span class="flavor">Suco verde</span>
-                <span class="price">R$ 6,00</span>
+                <div class="img-container">
+                <img src="<?= $product['image'] ?>"  alt="<?= $product['name'] ?>">
+                <span class="cart-btn"><i class="fa-solid fa-cart-shopping" style="color: #fff;"></i></span>
+                </div>
+                <span class="flavor"><?= $product['name'] ?></span>
+                <span class="price"><?= "R$" . $product['price'] ?></span>
             </div>
-
-            <div class="mimic">
-                <img src="./assets/img/suco_de_maca.webp" alt="Suco de maça">
-                <span class="flavor">Suco de maça</span>
-                <span class="price">R$ 6,00</span>
-            </div>
-
-            <div class="mimic">
-                <img src="./assets/img/suco_laranja.webp" alt="Suco de laranja">
-                <span class="flavor">Suco de laranja</span>
-                <span class="price">R$ 6,00</span>
-            </div>
-
-            <div class="mimic">
-                <img src="./assets/img/taranja_rosa.webp" alt="Taranja rosa">
-                <span class="flavor">Toranja rosa</span>
-                <span class="price">R$ 6,00</span>
-            </div>
-
-            <div class="mimic">
-                <img src="./assets/img/gengibre_e_tangerina.webp" alt="Gengibre e tangerina">
-                <span class="flavor">Gengibre e tangerina</span>
-                <span class="price">R$ 6,00</span>
-            </div>
-
-            <div class="mimic">
-                <img src="./assets/img/frambuesa.webp" alt="Lima e frambuesa">
-                <span class="flavor">Lima e frambuesa</span>
-                <span class="price">R$ 6,00</span>
-            </div>
+            <?php endforeach; ?>
         </div>
     </main>
 

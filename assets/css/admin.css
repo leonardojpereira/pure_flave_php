@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Syne", Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+header .frete {
+  background-color: #d8ebc7;
+  padding: 8px 0;
+  text-align: center;
+}
+header .frete span {
+  font-size: 14px;
+  font-style: italic;
+}
+header .header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 25px 60px;
+  border-bottom: solid 1px #3d5a23;
+  border-top: solid 1px #3d5a23;
+}
+header .header .navigation {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  gap: 20px;
+}
+header .header .navigation .logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #3d5a23;
+}
+header .header .navigation .logo a img {
+  width: 40px;
+  height: 40px;
+}
+header .header .navigation .logo a h1 {
+  color: #3d5a23;
+  font-weight: bolder;
+}
+header .header .navigation ul li {
+  display: inline;
+  margin: 0 25px;
+}
+header .header .navigation ul li a {
+  text-decoration: none;
+  color: #1e2b11;
+}
+header .header .ContainerLogin a {
+  text-decoration: none;
+  color: #3d5a23;
+}
+
+main {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+main h1 {
+  text-align: center;
+  padding-top: 20px;
+  color: #3d5a23;
+}
+
+.container {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid #3d5a23;
+  border-radius: 5px;
+}
+.product h3 {
+  color: #3d5a23;
+}
+.product img {
+  max-width: 100px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: #3d5a23;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  width: 40%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-content form label {
+  margin-top: 22px;
+}
+.modal-content form input {
+  height: 40px;
+  margin-top: 6px;
+  padding-left: 6px;
+}
+.modal-content form button {
+  margin-top: 22px;
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=admin.css.map */

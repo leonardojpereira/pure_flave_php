@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap');
+
+$primary-color: rgb(61, 90, 35);
+$secondary-color: rgb(216, 235, 199);
+$text-color: rgb(30, 43, 17);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Syne', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    .frete {
+        background-color: $secondary-color;
+        padding: 8px 0;
+        text-align: center;
+
+        span {
+            font-size: 14px;
+            font-style: italic;
+        }
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 25px 60px;
+        border-bottom: solid 1px $primary-color;
+        border-top: solid 1px $primary-color;
+
+        .navigation {
+            .logo {
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    color: $primary-color;
+                    img {
+                      width: 40px;
+                      height: 40px;
+                    }
+                   
+                    h1 {
+                      color: $primary-color;
+                      font-weight: bolder;
+                    }
+                  }
+            }
+
+            display: flex;
+            align-items: center;
+            width: 70%;
+            gap: 20px;
+
+            ul {
+                li {
+                    display: inline;
+                    margin: 0 25px;
+
+                    a {
+                        text-decoration: none;
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+
+        .ContainerLogin {
+            a {
+                text-decoration: none;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+main {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+        h1 {
+            text-align: center;
+            padding-top: 20px;
+            color: $primary-color;
+        }
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid $primary-color;
+  border-radius: 5px;
+
+  h3 {
+    color: $primary-color;
+  }
+  
+  img {
+    max-width: 100px;
+    margin-right: 10px;
+    border-radius: 8px;
+  }
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 20% auto;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        
+        label {
+            margin-top: 22px;
+        }
+
+        input {
+            height: 40px;
+            margin-top: 6px;
+            padding-left: 6px;
+        }
+
+        button {
+            margin-top: 22px;
+        }
+    }
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
