@@ -146,7 +146,7 @@ $products = [
             <span class="close-modal">&times;</span>
             <h3>Seu Carrinho</h3>
             <div class="cart-items">
-                Seu carrinho está vazio
+                Seu carrinho está vazio :(
             </div>
             <div class="cart-total-container">
                 <div class="cart-total">

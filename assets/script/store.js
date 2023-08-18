@@ -73,32 +73,40 @@ function updateCart() {
   let totalItems = 0;
   let totalPrice = 0;
 
-  cart.forEach((item, index) => {
-    const cartItem = document.createElement("div");
-    cartItem.classList.add("cart-item");
-    cartItem.innerHTML = `
-            <img src="${item.image}" alt="${item.name}">
-            <div class="item-details">
-                <span class="item-name">${item.name}</span>
-                <span class="item-price">R$ ${item.price.toFixed(2)}</span>
-                <div class="item-controls">
-                    <span class="item-quantity">Quantidade: ${
-                      item.quantity
-                    }</span>
-                    <div class="btn-container">
-                        <button class="control-btn add" data-index="${index}">+</button>
-                        <button class="control-btn remove" data-index="${index}">-</button>
-                    </div>
+  if (cart.length === 0) {
+    cartItems.innerHTML = "Seu carrinho está vazio :(";
+    cartTotal.innerHTML = "<span>Total: R$ 0.00</span>";
+    checkoutBtn.disabled = true;
+  } else {
+    cart.forEach((item, index) => {
+      const cartItem = document.createElement("div");
+      cartItem.classList.add("cart-item");
+      cartItem.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div class="item-details">
+            <span class="item-name">${item.name}</span>
+            <span class="item-price">R$ ${item.price.toFixed(2)}</span>
+            <div class="item-controls">
+                <span class="item-quantity">Quantidade: ${
+                  item.quantity
+                }</span>
+                <div class="btn-container">
+                    <button class="control-btn add" data-index="${index}">+</button>
+                    <button class="control-btn remove" data-index="${index}">-</button>
                 </div>
             </div>
-        `;
-    cartItems.appendChild(cartItem);
+        </div>
+      `;
+      cartItems.appendChild(cartItem);
 
-    totalItems += item.quantity;
-    totalPrice += item.price * item.quantity;
-  });
+      totalItems += item.quantity;
+      totalPrice += item.price * item.quantity;
+    });
 
-  cartTotal.innerHTML = `<span>Total: R$ ${totalPrice.toFixed(2)}</span>`;
+    cartTotal.innerHTML = `<span>Total: R$ ${totalPrice.toFixed(2)}</span>`;
+    checkoutBtn.disabled = false;
+  }
+
   cartCounter.textContent = totalItems;
 
   const addButtons = document.querySelectorAll(".control-btn.add");
