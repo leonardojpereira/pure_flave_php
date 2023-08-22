@@ -1,0 +1,64 @@
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+.container-form h1 {
+  font-size: 42px;
+  margin-bottom: 42px;
+}
+.container-form form {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  background-color: #d8ebc7;
+  display: flex;
+  flex-direction: column;
+}
+.container-form form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #3d5a23;
+}
+.container-form form label[for=preco],
+.container-form form label[for=imagem] {
+  margin-top: 20px;
+}
+.container-form form input[type=text],
+.container-form form input[type=number],
+.container-form form input[type=file] {
+  width: 100%;
+  border: 1px solid #d8ebc7;
+  border-radius: 3px;
+  margin-top: 5px;
+  background-color: #fff;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 6px;
+}
+.container-form form input[type=file] {
+  background: none;
+}
+.container-form form .botao-cadastrar {
+  background-color: #3d5a23;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+.container-form form .botao-cadastrar:hover {
+  background-color: #243515;
+}
+
+/*# sourceMappingURL=create-product.css.map */

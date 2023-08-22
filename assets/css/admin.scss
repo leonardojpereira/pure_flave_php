@@ -93,10 +93,25 @@ main {
             color: $primary-color;
         }
 
+        .create-product-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 32px;
+
+            .create-product-btn {
+              text-decoration: none;
+              background-color: $primary-color;
+              padding: 18px 42px;
+              color: #fff;
+              border-radius: 8px;
+            }
+        }
+      
 }
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 32px auto;
   padding: 20px;
   background-color: #fff;
@@ -118,6 +133,7 @@ main {
   
   img {
     max-width: 100px;
+    max-height: 130px;
     margin-right: 10px;
     border-radius: 8px;
   }

@@ -1,46 +1,15 @@
 <?php
 
-$products = [
-    [
-        'name' => 'Suco verde',
-        'price' => '6.00',
-        'image' => 'assets/img/suco_verde.webp'
-    ],
+require 'src/connection-db.php';
+require 'src/Model/Product.php';
+require 'src/Repository/ProductRepository.php';
 
-    [
-        'name' => 'Suco de maça',
-        'price' => '6.00',
-        'image' => 'assets/img/suco_de_maca.webp'
-    ],
-
-    [
-        'name' => 'Suco de laranja',
-        'price' => '6.00',
-        'image' => 'assets/img/suco_laranja.webp'
-    ],
-
-    [
-        'name' => 'Toranja rosa',
-        'price' => '6.00',
-        'image' => 'assets/img/taranja_rosa.webp'
-    ],
-
-    [
-        'name' => 'Gengibre e tangerina',
-        'price' => '6.00',
-        'image' => 'assets/img/gengibre_e_tangerina.webp'
-    ],
-
-    [
-        'name' => 'Lima e frambuesa',
-        'price' => '6.00',
-        'image' => 'assets/img/frambuesa.webp'
-    ]
-];
+$productRepository = new ProductRepository($pdo);
+$productsData = $productRepository->productOptions();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -88,14 +57,14 @@ $products = [
         <div class="containerProducts">
             <?php
             $productIdCounter = 0; // Inicializa o contador
-            foreach ($products as $product) : ?>
+            foreach ($productsData as $product) : ?>
                 <div class="mimic">
                     <div class="img-container">
-                        <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>">
-                        <span class="cart-btn" data-name="<?= $product['name'] ?>" data-price="<?= $product['price'] ?>" data-image="<?= $product['image'] ?>" data-product-id="<?= $productIdCounter ?>"><i class="fa-solid fa-cart-shopping" style="color: #fff;"></i></span>
+                    <img src="<?= $product->getImageDirectoy() ?>" alt="<?= $product->getName() ?>">
+                        <span class="cart-btn" data-name="<?= $product->getName() ?>" data-price="<?= $product->getPrice() ?>" data-image="<?= "assets/img/" . $product->getImage() ?>" data-product-id="<?= $productIdCounter ?>"><i class="fa-solid fa-cart-shopping" style="color: #fff;"></i></span>
                     </div>
-                    <span class="flavor"><?= $product['name'] ?></span>
-                    <span class="price"><?= "R$" . $product['price'] ?></span>
+                    <span class="flavor"><?= $product->getName() ?></span>
+                    <span class="price"><?= $product->getFormatedPrice() ?></span>
                 </div>
             <?php
                 $productIdCounter++; // Incrementa o contador
