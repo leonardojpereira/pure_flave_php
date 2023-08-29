@@ -12,7 +12,7 @@ body {
 }
 
 header .frete {
-  background-color: rgb(216, 235, 199);
+  background-color: #d8ebc7;
   padding: 8px 0;
   text-align: center;
 }
@@ -26,8 +26,8 @@ header .header {
   align-items: center;
   width: 100%;
   padding: 25px 60px;
-  border-bottom: solid 1px rgb(61, 90, 35);
-  border-top: solid 1px rgb(61, 90, 35);
+  border-bottom: solid 1px #3d5a23;
+  border-top: solid 1px #3d5a23;
 }
 header .header .navigation {
   display: flex;
@@ -40,14 +40,14 @@ header .header .navigation .logo a {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: rgb(61, 90, 35);
+  color: #3d5a23;
 }
 header .header .navigation .logo a img {
   width: 40px;
   height: 40px;
 }
 header .header .navigation .logo a h1 {
-  color: rgb(61, 90, 35);
+  color: #3d5a23;
   font-weight: bolder;
 }
 header .header .navigation ul li {
@@ -56,7 +56,7 @@ header .header .navigation ul li {
 }
 header .header .navigation ul li a {
   text-decoration: none;
-  color: rgb(30, 43, 17);
+  color: #1e2b11;
 }
 header .header .ContainerLogin {
   display: flex;
@@ -75,7 +75,7 @@ header .header .ContainerLogin .userContainer .userIcon {
 }
 header .header .ContainerLogin a {
   text-decoration: none;
-  color: rgb(61, 90, 35);
+  color: #3d5a23;
 }
 header .header .ContainerLogin .cart-container {
   display: flex;
@@ -108,35 +108,63 @@ main {
   align-items: center;
   gap: 80px;
 }
+@media screen and (max-width: 1200px) {
+  main {
+    max-width: 100%;
+    padding: 28px 0;
+    gap: 20px;
+  }
+}
 main .ContainerDescription {
   width: 40%;
 }
 main .ContainerDescription h2 {
   font-size: 52px;
-  color: rgb(61, 90, 35);
+  color: #3d5a23;
+}
+@media screen and (max-width: 1200px) {
+  main .ContainerDescription h2 {
+    font-size: 36px;
+  }
 }
 main .ContainerDescription .subtitle {
   margin: 32px 0;
   font-size: 22px;
-  color: rgb(30, 43, 17);
+  color: #1e2b11;
+}
+@media screen and (max-width: 1200px) {
+  main .ContainerDescription .subtitle {
+    font-size: 18px;
+  }
 }
 main .ContainerDescription .btn {
   width: 160px;
   height: 48px;
-  background-color: rgb(61, 90, 35);
+  background-color: #3d5a23;
   color: #fff;
   border: none;
   border-radius: 30px;
   font-size: 16px;
   transition: ease 0.4s;
-  border: solid 1px rgb(61, 90, 35);
+  border: solid 1px #3d5a23;
   cursor: pointer;
   text-decoration: none;
 }
 main .ContainerDescription .btn:hover {
-  color: rgb(61, 90, 35);
-  border: solid 1px rgb(61, 90, 35);
+  color: #3d5a23;
+  border: solid 1px #3d5a23;
   background: none;
+}
+@media screen and (max-width: 1200px) {
+  main .ContainerDescription .btn {
+    width: 140px;
+    height: 38px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .ContainerImage img {
+    width: 320px;
+  }
 }
 
 footer {
@@ -145,15 +173,15 @@ footer {
 footer .ContainerContactInfo {
   display: flex;
   justify-content: space-around;
-  border-top: solid 1px rgb(61, 90, 35);
-  border-bottom: solid 1px rgb(61, 90, 35);
+  border-top: solid 1px #3d5a23;
+  border-bottom: solid 1px #3d5a23;
   padding: 28px 0;
   gap: 18px;
 }
 footer .ContainerContactInfo ul li {
   list-style: none;
   margin: 14px 0;
-  color: rgb(30, 43, 17);
+  color: #1e2b11;
   font-size: 12px;
 }
 footer .ContainerCopyrightInfo {
@@ -162,11 +190,11 @@ footer .ContainerCopyrightInfo {
   align-items: center;
   gap: 22px;
   padding: 28px 0 38px 0;
-  background-color: rgb(226, 226, 242);
+  background-color: #e2e2f2;
 }
 footer .ContainerCopyrightInfo .footerText {
   font-size: 12px;
-  color: rgb(61, 90, 35);
+  color: #3d5a23;
 }
 footer .ContainerCopyrightInfo .payment {
   display: flex;
@@ -179,7 +207,8 @@ footer .ContainerCopyrightInfo .payment .footerText {
 .cart-modal {
   position: fixed;
   top: 0;
-  right: -400px; /* Começa fora da tela */
+  right: -400px;
+  /* Começa fora da tela */
   width: 400px;
   height: 100%;
   background-color: #fff;
@@ -244,7 +273,7 @@ footer .ContainerCopyrightInfo .payment .footerText {
 .checkout-btn {
   display: block;
   margin-top: 20px;
-  background-color: rgb(61, 90, 35);
+  background-color: #3d5a23;
   color: white;
   border: none;
   padding: 10px 20px;

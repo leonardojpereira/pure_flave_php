@@ -131,18 +131,32 @@ main {
     align-items: center;
     gap: 80px;
 
+    @media  screen and (max-width: 1200px) {
+        max-width: 100%;
+        padding: 28px 0;
+        gap: 20px;
+    }
+
     .ContainerDescription {
         width: 40%;
 
         h2 {
             font-size: 52px;
             color: $primary-color;
+
+            @media  screen and (max-width: 1200px) {
+                font-size: 36px;
+            }
         }
 
         .subtitle {
             margin: 32px 0;
             font-size: 22px;
             color: $text-color;
+
+            @media  screen and (max-width: 1200px) {
+                font-size: 18px;
+            }
         }
 
         .btn {
@@ -162,6 +176,19 @@ main {
                 color: $primary-color;
                 border: solid 1px $primary-color;
                 background: none;
+            }
+
+            @media  screen and (max-width: 1200px) {
+                width: 140px;
+                height: 38px;
+            }
+        }
+    }
+
+    .ContainerImage {
+        img {
+            @media  screen and (max-width: 1200px) {
+                width: 320px;
             }
         }
     }
