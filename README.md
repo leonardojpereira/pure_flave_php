@@ -1,7 +1,7 @@
 ![pure_flave_print](https://github.com/leonardojpereira/pure_flave_php/assets/87662269/d500db0d-2c57-416b-b7b0-3a4ef6186ec2)
 
 <h1 align="center">
- E-commerce - Pure Flave 📋
+ E-commerce - Pure Flave 🥬
 </h1>
 
 <h2>
@@ -9,7 +9,7 @@
 </h2>
 
 <p>
-Aplicação desenvolvida com o objetivo de praticar conceitos de PHP, banco de dados e MySQL. Trata-se de um e-commerce de bebidas orgânicas.
+Aplicação desenvolvida com o objetivo de praticar conceitos de backend e banco de dados com MySQL. Trata-se de um e-commerce de bebidas orgânicas.
 </p>
 
 ## 🛠️ Feito com
