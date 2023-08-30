@@ -20,7 +20,7 @@ Aplicação desenvolvida com o objetivo de praticar conceitos de PHP, banco de d
 - <img align="center" alt="leo-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> **CSS**
 - <img align="center" alt="leo-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg"> **JavaScript**
 - <img align="center" alt="logo_react" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"> **PHP**
-- <img align="center" alt="logo_react" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"> **MySQL**
+- <img align="center" alt="logo_react" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> **MySQL**
 
 ⌨️ with ❤️ by [Leonardo Barbosa](https://github.com/leonardojpereira) 😊
 
